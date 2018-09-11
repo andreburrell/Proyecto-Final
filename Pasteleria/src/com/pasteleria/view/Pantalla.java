@@ -19,7 +19,6 @@ public class Pantalla {
 											"");
 			conex.abrir();*/
 			
-			System.out.println("dssssssssssssssssssssssss");
 			
 		
 			
