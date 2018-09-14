@@ -1,9 +1,8 @@
 package com.pasteleria.entity.Registrar;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.Locale;
-	import com.pasteleria.control.MiLeer;
-	import com.pasteleria.control.Conexion;
+import com.pasteleria.control.MiLeer;
+import com.pasteleria.control.Conexion;
 
 	public class Receta {
 		private int codigoProducto;
@@ -77,34 +76,23 @@ import java.util.Locale;
 		{
 			this.cantidad = Cantidad;
 		}
-		
-		/*public boolean equals(Object o)
-		{
-		
-			Compra co = (Compra) o;
-			return (this.codigoCompra == co.getCompra());
-		}
-		
-		public boolean escodigoCompra(int codigo)
-		{
-			return (this.codigoCompra == codigo);
-		}
-		*/
 		public void insert(Conexion conex) throws SQLException
 		{
-			
+			conex.abrir();
 			
 			String query = "INSERT INTO Receta";
 			query +=	   " SET codigoProducto = '" + this.getProducto() + "',";
 			query +=	   " codigoInventario = '" + this.getInventario() + "',";
 			query +=	   " cantidad = '" + this.getCantidad() + "' ";
 					
-			
+			conex.insert(query);
+			conex.cerrar();
 			
 			System.out.println("Registro Exitoso!");
 			
 		
 		}
+
 
 	}
 
