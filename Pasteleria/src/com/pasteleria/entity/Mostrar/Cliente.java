@@ -54,8 +54,8 @@ public class Cliente {
 	
 	public void mostrar() throws SQLException, ClassNotFoundException
 	{
-		conexion conex2 = new conexion ( "localhost",   
-				"tripcake's & more",  
+		Conexion conex2 = new Conexion ( "localhost",   
+				"pasteleria",  
 				"root",  		  
 				"");	
 		

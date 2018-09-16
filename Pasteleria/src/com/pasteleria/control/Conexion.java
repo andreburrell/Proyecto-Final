@@ -15,7 +15,7 @@ public class Conexion {
 
 	private Connection conn;
 
-	public conexion(String host, 
+	public Conexion(String host, 
 			String dbName, 
 			String uname, 
 			String pwd) throws ClassNotFoundException
