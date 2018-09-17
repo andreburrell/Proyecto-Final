@@ -3,6 +3,7 @@ package com.pasteleria.view;
 import java.sql.SQLException;
 
 import com.pasteleria.control.Conexion;
+import com.pasteleria.view.Menu.Menu;
 
 
 
@@ -21,10 +22,9 @@ public class Pantalla {
 											"");
 			conex.abrir();*/
 			
-			
-		
-			
-			
+			Menu m = new Menu();
+			m.ejecutarMenu();
+					
 			
 		}
 
