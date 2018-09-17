@@ -71,10 +71,7 @@ public class MenuActualizar {
 		{
 		case 0:
 			//Finalizar la Aplicacion
-			System.out.println("... Gracias por usarnos esperamos un 100 ...");
-			System.out.println(".......... by:  Johselyn Miranda  ..........");
-			System.out.println("........... and  Paul Fernandez  ...........");
-			System.exit(0);
+			System.out.println(".......... GRACIAS POR SU COMPRA ...........");
 			break;
 		case 1:
 			
