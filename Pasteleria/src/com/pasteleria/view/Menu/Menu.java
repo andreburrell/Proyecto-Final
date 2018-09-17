@@ -4,16 +4,8 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 import com.pasteleria.control.Conexion;
-import com.pasteleria.entity.Mostrar.Cliente;
-import com.pasteleria.entity.Registrar.Compra;
-import com.pasteleria.entity.Mostrar.DetalleVentas;
-import com.pasteleria.entity.Registrar.Empleado;
-/*import com.pasteleria.entity.Registrar.Producto;
-import com.pasteleria.entity.Registrar.Proveedor;
-import com.pasteleria.entity.Registrar.Receta;
-import com.pasteleria.entity.Registrar.Venta;*/
-public class MenuMostrar {
-	
+
+public class Menu {
 	public void ejecutarMenu() throws ClassNotFoundException, SQLException
 	{
 		Titulo();
@@ -26,7 +18,7 @@ public class MenuMostrar {
 	public void Titulo()
 	{
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-		System.out.println("@>>>>>>>>>...Pasteleria ...<<<<<<<<<<@");
+		System.out.println("@>>>>>>>>>>>>... PASTELERIA   ...<<<<<<<<<<<<@");
 		System.out.println("@>>>>>>>>>>>.... BIENVENIDOS ....<<<<<<<<<<<<@");
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 		
@@ -34,10 +26,11 @@ public class MenuMostrar {
 	
 	public void menuPrincipal()
 	{
-		System.out.println("----------------------------");
-		System.out.println("1. Mostrar Cliente");
-		System.out.println("2. Mostrar Detalle de Venta");
-		System.out.println("0. Salir");
+		System.out.println("------PANTALLA PRINCIPAL------");
+		System.out.println("1. Registrar");
+		System.out.println("2. Actualizar");
+		System.out.println("3. Mostrar");
+		System.out.println("4. Salir");
 
 		
 	}
@@ -76,40 +69,48 @@ public class MenuMostrar {
 		{
 		case 0:
 			//Finalizar la Aplicacion
-			System.out.println("... Gracias por usarnos esperamos un 100 ...");
-			System.out.println(".......... by:  Andres Burrell  ..........");
-			System.out.println("........... and  Paul Fernandez  ...........");
+			System.out.println(".......... GRACIAS POR SU COMPRA ...........");
 			System.exit(0);
 			break;
-			case 1: 
+		case 1:
 			
-			//Registrar un cliente
-			Cliente c;
+			MenuRegistrar mr;
 			
-			Conexion conex2 = new Conexion( "localhost",   
+			Conexion conex1 = new Conexion( "localhost",   
 					"pasteleria",  
 					"root",  		  
 					"");	
 			
-			c = new Cliente();
-			c.leerNIT();
-			c.mostrar();
+			mr = new MenuRegistrar(); 
+			mr.ejecutarMenu();
 			break;
-				
-		case 2:
 			
-			//Registrar el detalle de una venta
-			DetalleVentas dv;
+		/*case 2:
+			
+			MenuActualizar ma;
+			
+			Conexion conex2 = new conexion( "localhost",   
+					"pasteleria",  
+					"root",  		  
+					"");	
+			
+			ma = new MenuActualizar(); 
+			ma.ejecutarMenu();
+			break;
+			
+		case 3:
+			
+			MenuMostrar mm;
 			
 			Conexion conex3 = new Conexion( "localhost",   
 					"pasteleria",  
 					"root",  		  
 					"");	
 			
-			dv = new DetalleVentas(); 
-			dv.leerDetalleVentas();
-			dv.mostrar();
-			
-			menuPrincipal();	
-			break;
-		}}}
+			mm = new MenuMostrar(); 
+			mm.ejecutarMenu();
+			break;*/
+			}
+		}
+
+}

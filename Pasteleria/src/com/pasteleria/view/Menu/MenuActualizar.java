@@ -4,16 +4,11 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 import com.pasteleria.control.Conexion;
-import com.pasteleria.entity.Mostrar.Cliente;
-import com.pasteleria.entity.Registrar.Compra;
-import com.pasteleria.entity.Mostrar.DetalleVentas;
-import com.pasteleria.entity.Registrar.Empleado;
-/*import com.pasteleria.entity.Registrar.Producto;
-import com.pasteleria.entity.Registrar.Proveedor;
-import com.pasteleria.entity.Registrar.Receta;
-import com.pasteleria.entity.Registrar.Venta;*/
-public class MenuMostrar {
-	
+import com.pasteleria.entity.Actualizar.Cliente;
+import com.pasteleria.entity.Actualizar.Empleado;
+
+public class MenuActualizar {
+
 	public void ejecutarMenu() throws ClassNotFoundException, SQLException
 	{
 		Titulo();
@@ -26,17 +21,17 @@ public class MenuMostrar {
 	public void Titulo()
 	{
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-		System.out.println("@>>>>>>>>>...Pasteleria ...<<<<<<<<<<@");
+		System.out.println("@>>>>>>>>>>>>... PASTELERIA   ...<<<<<<<<<<<<@");
 		System.out.println("@>>>>>>>>>>>.... BIENVENIDOS ....<<<<<<<<<<<<@");
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-		
+			
 	}
 	
 	public void menuPrincipal()
 	{
 		System.out.println("----------------------------");
-		System.out.println("1. Mostrar Cliente");
-		System.out.println("2. Mostrar Detalle de Venta");
+		System.out.println("1. Actualizar Cliente");
+		System.out.println("2. Actualizar Empleado");
 		System.out.println("0. Salir");
 
 		
@@ -81,35 +76,42 @@ public class MenuMostrar {
 			System.out.println("........... and  Paul Fernandez  ...........");
 			System.exit(0);
 			break;
-			case 1: 
+		case 1:
 			
 			//Registrar un cliente
 			Cliente c;
+			
+			Conexion conex1 = new Conexion( "localhost",   
+					"pasteleria",  
+					"root",  		  
+					"");	
+			
+			c = new Cliente(); 
+			c.leerDatos();
+			c.insertar(conex1);
+			c.mostra();
+			
+			menuPrincipal();
+			break;
+		case 2:
+			
+			//Actualizar un empleado
+			Empleado e;
 			
 			Conexion conex2 = new Conexion( "localhost",   
 					"pasteleria",  
 					"root",  		  
 					"");	
 			
-			c = new Cliente();
-			c.leerNIT();
-			c.mostrar();
+			e = new Empleado(); 
+			e.leerDatos();
+			e.insertar(conex2);
+			e.mostrar();
+			
+			menuPrincipal();
 			break;
-				
-		case 2:
-			
-			//Registrar el detalle de una venta
-			DetalleVentas dv;
-			
-			Conexion conex3 = new Conexion( "localhost",   
-					"pasteleria",  
-					"root",  		  
-					"");	
-			
-			dv = new DetalleVentas(); 
-			dv.leerDetalleVentas();
-			dv.mostrar();
-			
-			menuPrincipal();	
-			break;
-		}}}
+		}
+	}
+
+	
+}
