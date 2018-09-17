@@ -2,6 +2,8 @@ package com.pasteleria.view;
 
 import java.sql.SQLException;
 
+import com.pasteleria.control.Conexion;
+
 
 
 public class Pantalla {
@@ -14,8 +16,8 @@ public class Pantalla {
 		
 		public void correr() throws ClassNotFoundException, SQLException
 		{
-			/*conexion conex = new conexion("localhost",
-											"Pasteleria",
+			/*Conexion conex = new Conexion("localhost",
+											"pasteleria",
 											"");
 			conex.abrir();*/
 			
