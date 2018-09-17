@@ -85,11 +85,11 @@ public class Menu {
 			mr.ejecutarMenu();
 			break;
 			
-		/*case 2:
+		case 2:
 			
 			MenuActualizar ma;
 			
-			Conexion conex2 = new conexion( "localhost",   
+			Conexion conex2 = new Conexion( "localhost",   
 					"pasteleria",  
 					"root",  		  
 					"");	
@@ -109,7 +109,7 @@ public class Menu {
 			
 			mm = new MenuMostrar(); 
 			mm.ejecutarMenu();
-			break;*/
+			break;
 			}
 		}
 

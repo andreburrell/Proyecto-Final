@@ -8,10 +8,10 @@ import com.pasteleria.entity.Mostrar.Cliente;
 import com.pasteleria.entity.Registrar.Compra;
 import com.pasteleria.entity.Mostrar.DetalleVentas;
 import com.pasteleria.entity.Registrar.Empleado;
-/*import com.pasteleria.entity.Registrar.Producto;
+import com.pasteleria.entity.Registrar.Producto;
 import com.pasteleria.entity.Registrar.Proveedor;
 import com.pasteleria.entity.Registrar.Receta;
-import com.pasteleria.entity.Registrar.Venta;*/
+import com.pasteleria.entity.Registrar.Venta;
 public class MenuMostrar {
 	
 	public void ejecutarMenu() throws ClassNotFoundException, SQLException

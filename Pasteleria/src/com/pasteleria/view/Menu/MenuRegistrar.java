@@ -4,11 +4,11 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 import com.pasteleria.control.Conexion;
-/*import com.pasteleria.entity.Registrar.Cliente;
+import com.pasteleria.entity.Registrar.Cliente;
 import com.pasteleria.entity.Registrar.Compra;
 import com.pasteleria.entity.Registrar.DetalleVenta;
 import com.pasteleria.entity.Registrar.Empleado;
-import com.pasteleria.entity.Registrar.Inventario;*/
+import com.pasteleria.entity.Registrar.Inventario;
 import com.pasteleria.entity.Registrar.Produccion;
 import com.pasteleria.entity.Registrar.Producto;
 import com.pasteleria.entity.Registrar.Proveedor;
@@ -39,11 +39,11 @@ public class MenuRegistrar {
 	public void menuPrincipal()
 	{
 		System.out.println("----------------------------");
-		/*System.out.println("1. Registrar Cliente");
+		System.out.println("1. Registrar Cliente");
 		System.out.println("2. Registrar Compra");
 		System.out.println("3. Registrar Detalle de Venta");
 		System.out.println("4. Registrar Empleado");
-		System.out.println("5. Registrar Iventario");*/
+		System.out.println("5. Registrar Iventario");
 		System.out.println("6. Registrar Produccion");
 		System.out.println("7. Registrar Producto");
 		System.out.println("8. Registrar Proveedor");
@@ -91,7 +91,7 @@ public class MenuRegistrar {
 			System.out.println(".......... GRACIAS POR SU COMPRA ...........");
 			System.exit(0);
 			break;
-		/*case 1:
+		case 1:
 			
 			//Registrar un cliente
 			Cliente c;
@@ -168,7 +168,7 @@ public class MenuRegistrar {
 			i = new Inventario();
 			i.leerDatos();
 			i.insert(conex5);
-			break;*/
+			break;
 		case 6:
 			
 			//Registrar la produccion
