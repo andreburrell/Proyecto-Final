@@ -17,10 +17,11 @@ public class Pantalla {
 		
 		public void correr() throws ClassNotFoundException, SQLException
 		{
-			/*Conexion conex = new Conexion("localhost",
+			Conexion conex = new Conexion("localhost",
 											"pasteleria",
+											"root",
 											"");
-			conex.abrir();*/
+			conex.abrir();
 			
 			Menu m = new Menu();
 			m.ejecutarMenu();
